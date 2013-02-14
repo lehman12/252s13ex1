@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ISAT 252 Exam 1
+        </title>
+            <style>
+                
+            </style>
+            <script src="/Users/citywok62dawer/Desktop/MM_JAVASCRIPT2E/_js/jquery-1.7.2.min.js"></script>
+            <script src="/Users/citywok62dawer/Desktop/MM_JAVASCRIPT2E/_js/jquery.validate.min.js"></script>
+    </head>
+        <body>
+            <form action="contact_info.php" method="post" id="signup">
+                <p>Address line 1 <input type="text" name="address1" size="14" class="required" title="Please insert your street address"></p>
+                
+                <p>Address line 2 <input type="text name="address2" size="14"></p>
+                
+                <p>City <input type="text" name="city" size="14" class="required" title="Please insert your city"></p>
+                
+                <p>Please choose your state:
+                    <select>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="VA">Virginia</option>
+                    </select>
+                </p>
+                
+                <p>Zip code
+                    <input type="number" maxlength="5" class="required">
+                </p>
+                
+                <p>Phone Number
+                    <input type="text" size="14" maxlength="12" class="required"> <i>Format: xxx-xxx-xxxx</i>
+                </p>
+                
+                <p>Email Address <input type="email" name="email" size="14" class="required">
+                </p>
+                <p>Submit
+                    <input type="button" name="submit">
+                </p>
+            </form>
+        </body>
+</html>
