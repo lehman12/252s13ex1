@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            ISAT 252 Exam 1
-        </title>
-            <style>
-                
-            </style>
-            <script src="/Users/citywok62dawer/Desktop/MM_JAVASCRIPT2E/_js/jquery-1.7.2.min.js"></script>
-            <script src="/Users/citywok62dawer/Desktop/MM_JAVASCRIPT2E/_js/jquery.validate.min.js"></script>
-    </head>
+    <html>
+        <head>
+            <title> 252 exam 1</title>
+        </head>
         <body>
-            <form action="contact_info.php" method="post" id="signup">
-                <p>Address line 1 <input type="text" name="address1" size="14" class="required" title="Please insert your street address"></p>
-                
-                <p>Address line 2 <input type="text name="address2" size="14"></p>
-                
-                <p>City <input type="text" name="city" size="14" class="required" title="Please insert your city"></p>
-                
-                <p>Please choose your state:
+<script>
+function validateForm()
+{
+var x=document.forms["myForm"]["email"].value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+    {
+  alert("Not a valid e-mail address");
+  return false;
+    }
+}
+
+</script>
+</head>
+
+<body>
+<form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+    
+<p>Address 1: <input type="text" name="addr" class="required"</p>
+
+<p>Address 2: <input type="text" name="addr2" class="required"</p>
+
+<p>City: <input type="text" name="city" class="required"</p>
+
+<p>Please choose your state:
                     <select>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
                     <option value="VA">Virginia</option>
                     </select>
-                </p>
-                
-                <p>Zip code
-                    <input type="number" maxlength="5" class="required">
-                </p>
-                
-                <p>Phone Number
-                    <input type="text" size="14" maxlength="12" class="required"> <i>Format: xxx-xxx-xxxx</i>
-                </p>
-                
-                <p>Email Address <input type="email" name="email" size="14" class="required">
-                </p>
-                <p>Submit
-                    <input type="button" name="submit">
-                </p>
-            </form>
+</p>
+
+<p>Zip: <input type="text" maxlength="5" class= "required"> </p>
+
+<p>Email: <input type="text" name="email" class= "required"> </p>
+
+<input type="submit" value="Submit">
         </body>
-</html>
+    </html>
+    <!--Thanks to http://www.w3schools.com/js/js_form_validation.asp for the email code-->
+    
